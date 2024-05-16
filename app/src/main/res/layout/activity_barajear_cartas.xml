@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BarajearCartasActivity">
+
+    <!-- TextView para el contador de tiempo -->
+    <TextView
+        android:id="@+id/contadorTiempoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/nombreCartaTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView para el nombre de la carta -->
+    <TextView
+        android:id="@+id/nombreCartaTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="Nombre de la Carta"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/centerImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contadorTiempoTextView" />
+
+    <!-- ImageView en el centro de la pantalla -->
+    <ImageView
+        android:id="@+id/centerImageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/el_gallo"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- TextView para la leyenda -->
+    <TextView
+        android:id="@+id/leyendaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/azul"
+        android:gravity="center"
+        android:text="Esta carta ya ha sido mostrada"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/centerImageView"
+        app:layout_constraintEnd_toEndOf="@id/centerImageView"
+        app:layout_constraintStart_toStartOf="@id/centerImageView"
+        app:layout_constraintTop_toTopOf="@id/centerImageView" />
+
+    <!-- ImageButton Atrás en la parte inferior izquierda -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_back_72"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- ImageButton Siguiente en la parte inferior derecha -->
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_forward_72"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ImageButtons superiores en el lado izquierdo -->
+    <ImageButton
+        android:id="@+id/topLeftImageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_play_circle_filled_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/topLeftImageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_pause_circle_filled_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftImageButton1" />
+
+    <ImageButton
+        android:id="@+id/topLeftImageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_volume_up_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftImageButton2" />
+
+    <!-- ImageButtons superiores en el lado derecho -->
+    <ImageButton
+        android:id="@+id/topRightImageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_exit_to_app_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/topRightImageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_restart_alt_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topRightImageButton1" />
+
+    <ImageButton
+        android:id="@+id/topRightImageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_settings_applications_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topRightImageButton2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

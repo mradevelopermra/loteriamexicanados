@@ -1,0 +1,98 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/verde">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lectura de Cartas"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupLecturaCartas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioLeerCartas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Leer cartas" />
+
+            <RadioButton
+                android:id="@+id/radioLeerCartasConVerso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Leer cartas con verso" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo lectura"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:paddingTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioActivarTiempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Automático" />
+
+            <RadioButton
+                android:id="@+id/radioDesactivarTiempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Manual" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Cartas"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:paddingTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTipoCartas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/radioCartasClasicas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Cartas clásicas" />
+
+            <RadioButton
+                android:id="@+id/radioCartasCaricatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Cartas caricatura" />
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>
